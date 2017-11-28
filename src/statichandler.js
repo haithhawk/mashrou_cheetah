@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-const staticHandler=(filePath,res)=>{
+const staticHandler=(filePath,res, type)=>{
 fs.readFile(filePath , (err,file)=>{
 if (err){
 
@@ -10,7 +10,7 @@ res.end();
 }else{
 
 res.writeHead(200,{
-'Content-Type':'text/html'
+'Content-Type':type
 
 });
 res.end(file);
