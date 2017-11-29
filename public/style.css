@@ -28,12 +28,10 @@ background-color: lightblue;
 }
 
 img{
-
-display: flex;
 align-items: center;
-  width: 100%
-
-
+display: block; margin: 0 auto;
+height: auto;
+width: 30rem;
 }
 
 #con{
@@ -41,5 +39,12 @@ align-items: center;
   font-family: 'Spectral SC', serif;
   font-size: 1em;
   color: black
+}
 
+@media only screen and (max-width: 450px) {
+    img {
+    display: flex
+    height: auto;
+    width: 100%;
+    }
 }
