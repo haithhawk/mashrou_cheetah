@@ -25,6 +25,7 @@
     "tape": "^4.8.0"
   },
   "dependencies": {
+    "eslint-config-airbnb": "^16.1.0",
     "request": "^2.83.0"
   }
 }
