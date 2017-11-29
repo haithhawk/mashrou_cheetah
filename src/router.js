@@ -1,5 +1,6 @@
 
 var staticHandler = require('./statichandler');
+var urlPackage=require('url');
 const router=(req,res) =>{
 
 const url = req.url;
@@ -16,6 +17,16 @@ else if (url.split('.')[1]=== 'css') {
   staticHandler(__dirname+'/..'+url, res, 'text/css');
 
 }
+else if (url.slice(1,4)=== 'api') {
+ var parameters=urlPackage.parse(url,true).query;
+ var lat=parameters.lat;
+ var long=parameters.long;
+ console.log("LAt :"+lat);
+ console.log("long: "+long);
+  //apiHandler(__)
+}
+
+
 else {
 res.writeHead(404);
 res.end('File not found');
