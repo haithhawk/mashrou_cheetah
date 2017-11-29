@@ -1,10 +1,10 @@
 {
   "name": "mashrou_cheetah",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Build from scratch a front and back-end system that utilises Google Maps geolocation (on-click event) to retrieve news and other data relevant to location",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape ./tests/test.js | tap-spec"
   },
   "repository": {
     "type": "git",
