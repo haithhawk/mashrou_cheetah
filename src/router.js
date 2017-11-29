@@ -1,6 +1,7 @@
 
 var staticHandler = require('./statichandler');
 var urlPackage=require('url');
+var apiHandler = require('./apihandler');
 const router=(req,res) =>{
 
 const url = req.url;
@@ -23,7 +24,7 @@ else if (url.slice(1,4)=== 'api') {
  var long=parameters.long;
  console.log("LAt :"+lat);
  console.log("long: "+long);
-  //apiHandler(__)
+  apiHandler(lat,long,res);
 }
 
 
