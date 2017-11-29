@@ -1,6 +1,6 @@
 # :confetti_ball::confetti_ball:Mashrou_Cheetah:confetti_ball::confetti_ball:
 
-Access our site here: https://facn3locagram.herokuapp.com
+Access our site here: http://welvon.herokuapp.com
 
 ## Build from scratch a front and back-end system that utilises Google Maps geolocation (on-click event) to retrieve news and other data relevant to location
 
