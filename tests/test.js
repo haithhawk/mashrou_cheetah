@@ -1,6 +1,7 @@
 const test = require("tape");
 const shot = require("shot");
 const router = require("../src/router");
+
 test("Test for the unknow route", function(t) {
   shot.inject(router, { method: "get", url: "/random" }, res => {
     t.equal(res.statusCode, 404, "should respond with status code of 404");
