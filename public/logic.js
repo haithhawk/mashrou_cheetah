@@ -5,7 +5,7 @@ function sendRequest(lat, long) {
 
     if (xhr.readyState == 4 && xhr.status == 200) {
 
-      updateDocument(JSON.parse(xhr.responseText));
+      updateDocument(JSON.parse(xhr.responseText).result);
 
     }
 

@@ -39,7 +39,17 @@ google.maps.event.addListener(map, 'bounds_changed', (function () {
 
 function updateDocument(data){
 
+var container=document.getElementById('con');
 
-console.log(data);
+
+data.forEach((article)=>{
+
+var image=document.createElement('img');
+image.src=article.urlImage;
+
+container.appendChild(image);
+
+
+});
 
 }
