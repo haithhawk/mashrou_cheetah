@@ -23,7 +23,7 @@ This was a project to extend our team experience with using APIs, making calls f
 
 
 #### WHAT	:loudspeaker:
-A application that will provide location based news from the New York Times based on a click event within Google maps.
+A application that will provide location based news from newsapi.org based on a click event within Google maps.
 
 #### HOW :wrench:
 We Whiteboarded our ideas and then split our project as follows. For details on system-architecture please see below for the relevant section.
@@ -42,6 +42,7 @@ Back End
 - apihandler.js (to API),
 - statichandler.js (from API) ,
 - filter.js
+- Test.js
 
 The chain of events were to take place as follows
 
@@ -49,7 +50,7 @@ The chain of events were to take place as follows
 - 2 Event listener for 'on-click' event
 - 3 XHR/server static server Request
 - 4 Request sent to GPS to address API
-- 5 Data manipulated and sent to NYT API
+- 5 Data manipulated and sent to newsapi.org API
 - 6 Response with required data
 - 5 Dom Manipulation / filtering of data in API Handler
 - 6 Rendering of information back to user
@@ -74,9 +75,8 @@ The chain of events were to take place as follows
 - Research suitable APIs to achieve user objectives
 - Readme outline
 - Setup of project and folders
--
-- outline front-end folders
-- outline back-end folders
+- outline front-end workload
+- outline back-end workload
 - create servers
 - create basic route paths
 
@@ -89,9 +89,10 @@ The chain of events were to take place as follows
 
 ###### STEP 3
 - Complete index.js (XHR requests)
-- TBC
-- TBC
-- TBC
+- Extend testing and see they pass
+- CSS and Mobile friendly checks
+- Accessability Checks
+- Linter Checks 
 - Update README
 - upload to cloud server
 - Review code between team members to ensure understanding
