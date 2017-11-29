@@ -1,4 +1,45 @@
+
+  @import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+body{
+background-color: lightblue;
+}
+
+#title {
+  text-align: center;
+  font-family: 'Spectral SC', serif;
+  font-size: 3em;
+  color: black
+}
+
+#sub-title{
+  text-align: center;
+  font-family: 'Spectral SC', serif;
+  font-size: 1em;
+  color: black
+}
+
 #map {
-      height: 400px;
-      width: 100%;
-     }
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 30em; auto
+  width: 60em; auto;
+  padding: 0.025em;
+}
+
+img{
+
+display: flex;
+align-items: center;
+  width: 100%
+
+
+}
+
+#con{
+  text-align: center;
+  font-family: 'Spectral SC', serif;
+  font-size: 1em;
+  color: black
+
+}
