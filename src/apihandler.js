@@ -22,17 +22,17 @@ const apiHandler = (lat, long, res) => {
     }
   });
 
-  function getNews(country) {
+  const getNews = country => {
     var newsUrl =
       "https://newsapi.org/v2/everything?q=" +
       country +
       "&apiKey=c15c82672fbe4a2b8f1bb7612e332801";
     request(newsUrl, (err, response, body) => {
-      var resultNews = [];
+      let resultNews = [];
 
       var articles = JSON.parse(body).articles;
       //console.log(articles[0])
-      for (var i = 0; i < articles.length; i++) {
+      for (let i = 0; i < articles.length; i++) {
         if (!articles[i].description && !articles[i].urlToImage) {
           console.log(i);
           continue;
@@ -49,7 +49,7 @@ const apiHandler = (lat, long, res) => {
       res.writeHead(200);
       res.end(JSON.stringify({ result: resultNews }));
     });
-  }
+  };
 };
 
 module.exports = apiHandler;
