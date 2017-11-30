@@ -32,12 +32,35 @@ We Whiteboarded our ideas and then split our project as follows. For details on 
 
 Front-end
 - index.html
-- Public - containing:
-- style.css,
-- dom.js,
-- logic.js
+
+- Public folder - containing:
+
+  - style.css,
+  - dom.js,
+  - logic.js
 
 Back End
+- src folder - containing:
+
+  - server.js,
+  - router.js,
+  - apihandler.js (to API),
+  - statichandler.js (from API) ,
+  - filter.js
+
+
+
+The chain of events were to take place as follows
+
+1. Click event in Google Maps
+2. Event listener for 'on-click' event
+3. XHR/server static server Request
+4. Request sent to GPS to address API
+5. Data manipulated and sent to NYT API
+6. Response with required data
+5. Dom Manipulation / filtering of data in API Handler
+6. Rendering of information back to user
+
 - src - containing:
 - server.js,
 - router.js,
@@ -58,10 +81,10 @@ The chain of events were to take place as follows
 - 6 Rendering of information back to user
 
 #### Instructions for using the website:
-- Click the weblink in the title of the repo. Then...
+Click the weblink in the title of the repo. Then...
 
-- 1) Click anywhere on the Google Maps Screen.
-- 2) The click event will trigger the rest of the User experience
+1. Click anywhere on the Google Maps Screen.
+2. The click event will trigger the rest of the User experience
 
 
 ----------------------------------
@@ -102,28 +125,28 @@ The chain of events were to take place as follows
 ----------------------------------
 ##### PROJECT OBJECTIVES
 
-- 1 Use at least 1 API
+1. Use at least 1 API
 
-- 2 Make your API calls from the back-end using the Request module (or one you build yourself)
+2. Make your API calls from the back-end using the Request module (or one you build yourself)
 
-- 3Your server should contain a minimum of 2 routes
+3. Your server should contain a minimum of 2 routes
 
-- 4 We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
+4. We expect back-end testing using tape (test as many components as you can) and basic front-end testing.
 
-- 5 Test your server by injecting fake HTTP requests using Shot.
+5. Test your server by injecting fake HTTP requests using Shot.
 
-- 6 Host your project on heroku, see resources
+6. Host your project on heroku, see resources
 
-- 7 Use module.exports and require to break a single large server file into smaller modules.
+7. Use module.exports and require to break a single large server file into smaller modules.
 
-- 8 Consider a good server file structure based on what we have discussed over the week.
+8. Consider a good server file structure based on what we have discussed over the week.
 
-- 9 Employ continuous intergration on your project with Travis or a similar tool. (If you decide to use Travis, we strongly recommend that you host this project in your own repo rather than in your cohort's FAC repository to avoid all builds getting queued together)
+9. Employ continuous intergration on your project with Travis or a similar tool. (If you decide to use Travis, we strongly recommend that you host this project in your own repo rather than in your cohort's FAC repository to avoid all builds getting queued together)
 
-- 10 Use CodeCov or a similar tool for test coverage.
+10. Use CodeCov or a similar tool for test coverage.
 
-- 11 Display continuous intergration and code coverage badges on your project README.
+11. Display continuous intergration and code coverage badges on your project README.
 
-- 12 Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
+12. Ensure that errors are handled, if for example a user attempts to make a request to a non-existent route to your server, provide the user with a custom response.
 
 - 13 Include a user input field on your web app and include server-side validation to protect your server from potentially malicious user input.
