@@ -28,24 +28,21 @@ const apiHandler = (lat, long, res) => {
       country +
       "&apiKey=c15c82672fbe4a2b8f1bb7612e332801";
     request(newsUrl, (err, response, body) => {
-      let resultNews = [];
-
-      var articles = JSON.parse(body).articles;
-      //console.log(articles[0])
-      for (let i = 0; i < articles.length; i++) {
-        if (!articles[i].description && !articles[i].urlToImage) {
-          console.log(i);
-          continue;
-        } else {
-          resultNews.push({
-            title: articles[i].title,
-            description: articles[i].description,
-            url: articles[i].url,
-            urlImage: articles[i].urlToImage
+      const { articles } = JSON.parse(body);
+      let resultNews = articles.reduce((articlesResult, article) => {
+        const { description, urlToImage, title, url } = article;
+        if (description && urlToImage) {
+          return articlesResult.concat({
+            title,
+            description,
+            url,
+            urlImage: urlToImage
           });
+        } else {
+          return articlesResult;
         }
-      }
-
+      }, []);
+      console.log(resultNews);
       res.writeHead(200);
       res.end(JSON.stringify({ result: resultNews }));
     });
