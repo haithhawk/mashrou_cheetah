@@ -13,10 +13,12 @@ const apiHandler = (lat, long, res) => {
 
     if (result[0]) {
       var country = result[0].components.country;
-       getNews(country,res);
-  } else {
+      getNews(country, res);
+    } else {
       res.writeHead(200);
-      res.end(JSON.stringify({ 'result': "NO result. Choose  another location" }));
+      res.end(
+        JSON.stringify({ result: "NO result. Choose  another location" })
+      );
     }
   });
 
@@ -31,7 +33,6 @@ const apiHandler = (lat, long, res) => {
       var articles = JSON.parse(body).articles;
       //console.log(articles[0])
       for (var i = 0; i < articles.length; i++) {
-
         if (!articles[i].description && !articles[i].urlToImage) {
           console.log(i);
           continue;
@@ -49,7 +50,6 @@ const apiHandler = (lat, long, res) => {
       res.end(JSON.stringify({ result: resultNews }));
     });
   }
-
 };
 
 module.exports = apiHandler;
