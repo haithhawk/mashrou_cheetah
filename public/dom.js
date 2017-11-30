@@ -1,24 +1,8 @@
-var map;
 function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
+  var map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 31.8, lng: 35.2 },
     zoom: 3
   });
-  /*
-   map.addListener('center_changed', function() {
-
-     window.setTimeout(function(){
-             var latlng=map.getCenter();
-             var lat=latlng.lat();
-             var lng=latlng.lng();
-
-      console.log("Lat :"+lat+"\n lng: "+lng);
-      alert("Lat :"+lat+"\n lng: "+lng);
-
-
-},1000);
-   });
-*/
   google.maps.event.addListener(
     map,
     "bounds_changed",
@@ -48,12 +32,11 @@ function updateDocument(data) {
   }
 
   data.forEach(function(article) {
-
-  var div =document.createElement("div");
-    div.className="article";
+    var div = document.createElement("div");
+    div.className = "article";
     var anchor = document.createElement("a");
     anchor.href = article.url;
-     anchor.setAttribute('target', '_blank');
+    anchor.setAttribute("target", "_blank");
     var image = document.createElement("img");
     image.src = article.urlImage;
 
@@ -66,7 +49,6 @@ function updateDocument(data) {
     div.appendChild(title);
     div.appendChild(description);
     div.appendChild(anchor);
-  container.appendChild(div);
-
+    container.appendChild(div);
   });
 }
