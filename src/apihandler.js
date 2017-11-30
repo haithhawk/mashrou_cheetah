@@ -32,15 +32,15 @@ const apiHandler = (lat, long, res) => {
       let resultNews = articles.reduce((articlesResult, article) => {
         const { description, urlToImage, title, url } = article;
         if (description && urlToImage) {
-          articlesResult.push({
+          return articlesResult.concat({
             title,
             description,
             url,
             urlImage: urlToImage
           });
+        } else {
+          return articlesResult;
         }
-
-        return articlesResult;
       }, []);
       console.log(resultNews);
       res.writeHead(200);
